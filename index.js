@@ -1,4 +1,5 @@
 const config = require('dotenv').config({path: __dirname + '/.env'})
+const ytdl = require('ytdl-core')
 const discord = require('discord.js')
 const client = new discord.Client()
 const token = process.env.DISCORD_KEY
@@ -11,21 +12,26 @@ client.on('ready', () =>{
     console.log('Bot pret.')
 })
 
-client.on('message', message => {
+client.on('message', async (message) => {
     if (!message.content.startsWith('*')) return
 
-    if (message.content === "*join") {
+    if (message.content === "*stop") {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
+            connection.play(ytdl("https://www.youtube.com/watch?v=40tl67LFnKI"))
           } else {
             message.reply('You need to join a voice channel first!');
           }
     }
 
     if (message.content.startsWith('*play')) {
-        connection.play(fs.createReadStream('https://drive.google.com/uc?export=download&id=1FDm4Zq_pf3HK4m9T0dXkD_OA3CkoISWQ'), {
-            type: 'audio/mpeg',
-          });
+        if (message.member.voice.channel) {
+            const connection = await message.member.voice.channel.join();
+            connection.play(ytdl("https://www.youtube.com/watch?v=1V6amNFNnN8n"))
+          } else {
+            message.reply('You need to join a voice channel first!');
+          }
+        
           
     }
 
