@@ -1,0 +1,26 @@
+{
+  "name": "azure-discord",
+  "version": "1.0.0",
+  "description": "Azure Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grenoblicronYT/Azure-Discord.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grenoblicronYT/Azure-Discord/issues"
+  },
+  "homepage": "https://github.com/grenoblicronYT/Azure-Discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "^0.0.4",
+    "install": "^0.13.0",
+    "npm": "^6.14.11"
+  }
+}
