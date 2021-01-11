@@ -14,4 +14,11 @@ client.on('ready', () =>{
 client.on('message', message => {
     if (!message.content.startsWith('*')) return
 
+    if (message.content === "*join")
+
+    if (message.content.startsWith('*play')) {
+       
+    }
+
+    
 })
