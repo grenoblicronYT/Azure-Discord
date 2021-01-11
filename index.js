@@ -27,8 +27,7 @@ client.on('message', async (message) => {
     if (message.content.startsWith('*play')) {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
-            let dispatcher = connection.play(ytdl("https://www.youtube.com/watch?v=1V6amNFNnN8n"))
-            dispatcher.destroy()
+            connection.play(ytdl("https://www.youtube.com/watch?v=1V6amNFNnN8n"))
           } else {
             message.reply('You need to join a voice channel first!');
           }
