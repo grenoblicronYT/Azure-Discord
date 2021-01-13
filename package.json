@@ -21,9 +21,11 @@
     "dotenv": "^8.2.0",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.2.7",
+    "fs": "^0.0.1-security",
     "install": "^0.13.0",
     "npm": "^6.14.11",
     "opusscript": "^0.0.7",
+    "pronote-api": "^2.3.0",
     "ytdl-core": "^4.4.2"
   }
 }
