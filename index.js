@@ -17,7 +17,7 @@ async function Pronote(url, username, password, _msg)
     const marks = await session.marks(); // Récupérer les notes du trimestre
     
     _msg.author.send(`L'élève a ${timetable.length} cours aujourd'hui`); 
-    _msg.author.send(`et a pour l'instant une moyenne de ${marks.averages.student} ce trimestre.`);
+    _msg.author.send("et a pour l'instant une moyenne de ${marks.averages.student} ce trimestre.")
     
     // etc. les fonctions utilisables sont 'timetable', 'marks', 'contents', 'evaluations', 'absences', 
     // 'homeworks', 'infos', et 'menu', sans oublier les champs 'user' et 'params' qui regorgent d'informations.
@@ -55,7 +55,7 @@ client.on('message', async (message) => {
         
           
     }
-
+    
     if (message.content.startsWith('*pronote')) {
       const msg = message
       const command = msg.content.split(' ')
